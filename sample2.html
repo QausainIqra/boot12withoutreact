@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('./images/download.jpg');
+            /* background-repeat: no-repeat; */
+            /* background-size:cover; */
+        }
+        img{
+            
+        }
+    </style>
+</head>
+<body>
+    
+        <img src="./images/b4bf7142cf2d938f02c4090380800e84.gif" id="cute"/>
+        <script>
+            var elem = document.querySelector('#cute')
+            var antimatedElement=elem.animate([
+                {transform: 'translate(0,0)'},
+                {transform: 'translate(0,800px)'},
+                {transform: 'translate(800px,800px)'},
+                {transform: 'translate(800px,0)'},
+                {transform: 'translate(0,0)'},
+
+
+            ],{
+                duration: 4000,
+                iterations: Infinity,
+            })
+            document.addEventListener('mousedown',()=> {
+                antimatedElement.pause();
+            })
+            document.addEventListener('mouseup', ()=> {
+                antimatedElement.play();
+            })
+        </script>
+    
+</body>
+</html>
